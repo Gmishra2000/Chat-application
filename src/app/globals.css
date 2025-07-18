@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #f9fafb;
+  }
+}
+
+@layer components {
+  .chat-bubble {
+    @apply rounded-2xl shadow-sm;
+  }
+
+  .chat-bubble-own {
+    @apply bg-blue-500 text-white rounded-br-md;
+  }
+
+  .chat-bubble-other {
+    @apply bg-white border border-gray-200 rounded-bl-md;
+  }
+
+  .avatar {
+    @apply rounded-full flex items-center justify-center text-white font-medium;
+  }
+
+  .status-indicator {
+    @apply absolute bg-green-500 border-2 border-white rounded-full;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
